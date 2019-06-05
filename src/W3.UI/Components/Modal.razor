@@ -1,0 +1,19 @@
+﻿@if (IsVisible)
+{
+    <div class="modal">
+
+        <!-- Modal content -->
+        <div class="content">
+            @ChildContent
+        </div>
+
+    </div>
+}
+
+@functions {
+    [Parameter]
+    private bool IsVisible { get; set; }
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+}

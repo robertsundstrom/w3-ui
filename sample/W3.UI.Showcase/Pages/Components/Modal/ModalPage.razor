@@ -1,0 +1,25 @@
+﻿@page "/modal"
+
+<h1>Modal</h1>
+
+<button class="btn" onclick="@OnShowModalClick">Show modal</button>
+
+<Modal IsVisible="@isModalOpen">
+    <span class="close" onclick="@OnCloseClick">&times;</span>
+    <h2>Hello</h2>
+    <p>Test</p>
+</Modal>
+
+@functions {
+    bool isModalOpen = false;
+
+    void OnShowModalClick(UIMouseEventArgs ev)
+    {
+        isModalOpen = true;
+    }
+
+    private void OnCloseClick(UIMouseEventArgs ev)
+    {
+        isModalOpen = false;
+    }
+}

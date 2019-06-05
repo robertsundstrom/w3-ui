@@ -1,0 +1,23 @@
+@inherits LayoutComponentBase
+
+<NavBar>
+   <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+        <span class="fa fa-home" aria-hidden="true"></span> Home
+    </NavLink>
+    <DropDown Text="Components">
+        <NavLink href="button">Button</NavLink>
+        <NavLink href="card">Card</NavLink>
+        <NavLink href="dropbutton">DropButton</NavLink>
+        <NavLink href="loader">Loader</NavLink>
+        <NavLink href="modal">Modal</NavLink>
+        <NavLink href="navbar">NavBar</NavLink>
+        <NavLink href="table">Table</NavLink>
+    </DropDown>
+    <NavLink class="nav-link" href="about">
+        <span class="fa fa-info" aria-hidden="true"></span> About
+    </NavLink>
+</NavBar>
+
+<div class="content">
+    @Body
+</div>

@@ -1,0 +1,17 @@
+@inherits LayoutComponentBase
+
+<NavBar>
+   <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+        <span class="fa fa-home" aria-hidden="true"></span> Home
+    </NavLink>
+    <NavLink class="nav-link" href="counter">
+        <span class="fa fa-plus" aria-hidden="true"></span> Counter
+    </NavLink>
+    <NavLink class="nav-link" href="fetchdata">
+        <span class="fa fa-list" aria-hidden="true"></span> Fetch data
+    </NavLink>
+</NavBar>
+
+<div class="content">
+    @Body
+</div>

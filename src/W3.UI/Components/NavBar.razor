@@ -1,0 +1,23 @@
+<div class="navbar @NavMenuCssClass" id="myTopnav">
+    <a class="icon" onclick="@ToggleNavMenu">
+        <i class="fa fa-bars"></i>
+    </a>
+    @ChildContent
+</div>
+
+@functions {
+    bool showNavMenu = false;
+
+    string NavMenuCssClass => showNavMenu ? "responsive" : null;
+
+    [Parameter]
+    private bool IsSticky { get; set; }
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+    void ToggleNavMenu()
+    {
+        showNavMenu = !showNavMenu;
+    }
+}

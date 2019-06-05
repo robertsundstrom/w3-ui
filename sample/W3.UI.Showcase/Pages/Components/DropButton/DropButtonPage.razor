@@ -1,0 +1,20 @@
+@page "/dropbutton"
+
+<h1>DropButton</h1>
+
+<label for="IsDropUp">Is Drop Up</label>
+<input name="IsDropUp" type="checkbox" bind="@isDropUp" />
+
+<label for="IsDropUp">Trigger on hover</label>
+<input name="IsDropUp" type="checkbox" bind="@triggerOnHover" />
+
+<DropDown Text="Test" Direction="@(isDropUp ? Direction.Up : Direction.Down)" TriggerOn="@(triggerOnHover ? DropTrigger.Hover : DropTrigger.Click)">
+    <NavLink href="#">Link 1</NavLink>
+    <NavLink href="#">Link 2</NavLink>
+    <NavLink href="#">Link 3</NavLink>
+</DropDown>
+
+@functions {
+    bool isDropUp = false;
+    bool triggerOnHover = false;
+}

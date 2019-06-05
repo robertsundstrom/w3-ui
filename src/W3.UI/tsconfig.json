@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "module": "none",
+      "lib": [ "dom", "esnext" ],
+      "noImplicitAny": true,
+      "preserveConstEnums": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "sourceRoot": "../",
+      "outFile": "content/js/W3.js"
+    }
+  }
+  

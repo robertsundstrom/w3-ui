@@ -1,0 +1,16 @@
+﻿<Card>
+    <span class="fa fa-pencil" aria-hidden="true"></span>
+    <strong>@Title</strong>
+
+    <span>
+        Please take our
+        <a target="_blank" href="https://go.microsoft.com/fwlink/?linkid=2086020">brief survey</a>
+    </span>
+    and tell us what you think.
+</Card>
+
+
+@functions {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter] string Title { get; set; }
+}

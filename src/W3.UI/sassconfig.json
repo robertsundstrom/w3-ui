@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "style": "expanded",
+        "sourceMap": true,
+        "outDir": "content/css"
+    },
+    "files": [
+        "W3.UI.scss"
+    ]
+}
