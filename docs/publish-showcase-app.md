@@ -1,4 +1,4 @@
-# Publish W2 UI Showcase
+# Publish W3 UI Showcase
 
 To set up the publish the showcase app, perform the following steps in the folder in which you have cloned the repo.
 
