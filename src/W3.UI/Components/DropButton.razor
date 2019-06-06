@@ -1,0 +1,62 @@
+<div class="dropdown" onmouseover="@MouseOver">
+    <button class="btn dropbtn" onclick="@ToggleDropMenu">
+        @Text
+        <i class="fa fa-caret-down"></i>
+    </button>
+    @if (isOpen)
+    {
+    <div class="@(Direction == Direction.Down ? "dropdown-content" : "dropup-content")" id="myDropdown" onclick="@ItemClicked">
+        @ChildContent
+    </div>
+    }
+</div>
+
+@functions {
+    bool isOpen = false;
+
+    [Parameter]
+    private string Text { get; set; }
+
+    [Parameter]
+    private Direction Direction { get; set; } = Direction.Down;
+
+    [Parameter]
+    private DropTrigger Trigger { get; set; } = DropTrigger.Click;
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+    protected override async Task OnInitAsync()
+    {
+        await base.OnInitAsync();
+    }
+
+    private void ToggleDropMenu(UIMouseEventArgs eventArgs)
+    {
+        if(Trigger == DropTrigger.Click) 
+        {
+            isOpen = !isOpen;
+        }
+    }
+
+    private void ItemClicked(UIMouseEventArgs eventArgs)
+    {
+        isOpen = false;
+    }
+
+    private void MouseOver(UIMouseEventArgs eventArgs)
+    {
+        if(Trigger == DropTrigger.Hover) 
+        {
+            isOpen = true;
+        }
+    }
+
+    private void MouseOut(UIMouseEventArgs eventArgs)
+    {
+        if(Trigger == DropTrigger.Hover) 
+        {
+            isOpen = false;
+        }
+    }
+}

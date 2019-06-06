@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+
+<div class="subnav">
+    @(Content ?? (@<button class="subnavbtn" href="@href" Match="@Match">@Text</button>))
+    <div class="subnav-content">
+        @ChildContent
+    </div>
+</div>
+
+
+@functions {
+    [Parameter]
+    private RenderFragment Content { get; set; }
+
+    [Parameter]
+    private string Text { get; set; }
+
+    [Parameter]
+    private string href { get; set; } = "#";
+
+    [Parameter]
+    private NavLinkMatch Match { get; set; }
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+}

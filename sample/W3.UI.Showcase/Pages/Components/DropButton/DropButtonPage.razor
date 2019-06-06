@@ -8,11 +8,11 @@
 <label for="IsDropUp">Trigger on hover</label>
 <input name="IsDropUp" type="checkbox" bind="@triggerOnHover" />
 
-<DropDown Text="Test" Direction="@(isDropUp ? Direction.Up : Direction.Down)" TriggerOn="@(triggerOnHover ? DropTrigger.Hover : DropTrigger.Click)">
+<DropButton Text="Test" Direction="@(isDropUp ? Direction.Up : Direction.Down)" Trigger="@(triggerOnHover ? DropTrigger.Hover : DropTrigger.Click)">
     <NavLink href="#">Link 1</NavLink>
     <NavLink href="#">Link 2</NavLink>
     <NavLink href="#">Link 3</NavLink>
-</DropDown>
+</DropButton>
 
 @functions {
     bool isDropUp = false;
