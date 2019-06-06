@@ -22,4 +22,4 @@ Implement components in Razor and C#, and avoid the use of JavaScript.
 Port stylesheets to SCSS.
 
 ## Sample app
-View it [here](http://robertsundstrom.com/w3-ui-samples)!
+View it [here](http://robertsundstrom.com/w3-ui-showcase)!
