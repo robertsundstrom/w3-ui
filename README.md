@@ -6,6 +6,9 @@ The components have been implemented with Razor, C# and SCSS.
 
 This project is not affiliated with W3Schools.
 
+## Use Cases
+* [Personal Blog](http://www.robertsundstrom.com/) of Robert Sundström
+
 ## Install
 
 ```sh
@@ -17,7 +20,7 @@ $ dotnet add package W3.UI --version 0.1.0-*
 The goal is to provide a basic set of components, based on the W3Schools CSS styles, to be used when building web apps using Blazor.
 
 ## Strategy
-Implement components in Razor and C#, and avoid the use of JavaScript.
+Implement components in Razor and C#, and avoid the use of TypeScript/JavaScript.
 
 Port stylesheets to SCSS.
 
