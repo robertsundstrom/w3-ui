@@ -25,8 +25,4 @@
     <ProjectReference Include="..\..\src\W3.UI\W3.UI.csproj" />
   </ItemGroup>
 
-  <Target Name="Sass" AfterTargets="Build">
-    <SassCompile />
-  </Target>
-
 </Project>

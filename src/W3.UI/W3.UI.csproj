@@ -45,9 +45,5 @@
     </PackageReference>
     <PackageReference Include="SassTask" Version="0.1.0-*" PrivateAssets="All" />
   </ItemGroup>
-
-  <Target Name="Sass" AfterTargets="Build">
-    <SassCompile />
-  </Target>
-
+  
 </Project>
