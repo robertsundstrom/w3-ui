@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\W3.UI\W3.UI.csproj" />
+    <ProjectReference Include="..\..\src\W3.Extensions\W3.Extensions.csproj" />
   </ItemGroup>
   
 </Project>
