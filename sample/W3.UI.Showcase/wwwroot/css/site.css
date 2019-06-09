@@ -2,4 +2,9 @@ body {
   margin: 0;
 }
 
-/*# sourceMappingURL=site.css.map */
+a.close {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
