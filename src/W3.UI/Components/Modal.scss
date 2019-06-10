@@ -24,3 +24,11 @@
         animation-duration: 0.4s
     }
 }
+
+@media screen and (max-width: 600px) {
+    .modal {
+        .content {
+            width: 95%;
+        }
+    }
+}

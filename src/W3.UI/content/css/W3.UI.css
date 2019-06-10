@@ -43,7 +43,7 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-a:active, a:hover, a.btn:hover {
+a:active, a:hover, a.btn:enabled:hover {
   outline-width: 0;
 }
 
@@ -254,62 +254,62 @@ a {
   cursor: not-allowed;
 }
 
-.btn .shadow :hover {
+.btn.shadow:enabled:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.success, .btn, .btn:hover {
-  background-color: #4CAF50;
+.btn.success {
+  background-color: #4caf50;
 }
 
 /* Green */
-.success:hover, .btn:hover {
+.btn.success:hover {
   background-color: #46a049;
 }
 
-.info {
-  background-color: #2196F3;
+.btn.info {
+  background-color: #2196f3;
 }
 
 /* Blue */
-.info:hover {
+.btn.info:enabled:hover {
   background: #0b7dda;
 }
 
-.warning {
+.btn.warning {
   background-color: #ff9800;
 }
 
 /* Orange */
-.warning:hover {
+.btn.warning:enabled:hover {
   background: #e68a00;
 }
 
-.danger {
+.btn.danger {
   background-color: #f44336;
 }
 
 /* Red */
-.danger:hover {
+.btn.danger:enabled:enabled:hover {
   background: #da190b;
 }
 
-.default {
+.btn.default, .btn, .btn:enabled:hover {
   background-color: #e7e7e7;
   color: black;
 }
 
 /* Gray */
-.default:hover {
+.btn.default:enabled:hover, .btn:enabled:hover {
   background: #ddd;
 }
 
 .green {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .blue {
-  background-color: #008CBA;
+  background-color: #008cba;
 }
 
 .red {
@@ -345,7 +345,7 @@ a {
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover, .dropbtn.btn:enabled:hover, .dropbtn:focus {
   background-color: #2980B9;
 }
 
@@ -386,8 +386,9 @@ a {
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover,
-.dropup-content a:hover {
+.dropdown-content a:hover, .dropdown-content a.btn:enabled:hover,
+.dropup-content a:hover,
+.dropup-content a.btn:enabled:hover {
   background-color: #ddd;
 }
 
@@ -444,6 +445,11 @@ a {
   animation-duration: 0.4s;
 }
 
+@media screen and (max-width: 600px) {
+  .modal .content {
+    width: 95%;
+  }
+}
 /* Add a black background color to the top navigation */
 .navbar {
   background-color: #333;
@@ -461,10 +467,12 @@ a {
   font-size: 17px;
 }
 
-/* Add an active class to highlight the current page */
-.active {
+.navbar {
+  /* Add an active class to highlight the current page */
+}
+.navbar .active {
   background-color: #4CAF50;
-  color: white;
+  color: white !important;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -473,7 +481,7 @@ a {
 }
 
 /* Add a dark background on navbar links and the dropdown button on hover */
-.navbar a:hover, .navbar .dropdown:hover .dropbtn {
+.navbar a:hover, .navbar a.btn:enabled:hover, .navbar .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
 }
@@ -516,7 +524,7 @@ a {
   text-align: left;
 }
 
-.navbar .dropdown:hover .dropbtn, .navbar a:hover {
+.navbar .dropdown:hover .dropbtn, .navbar a:hover, .navbar a.btn:enabled:hover {
   background-color: #555;
   color: white;
 }
@@ -608,7 +616,7 @@ a {
   margin: 0;
 }
 
-.navbar a:hover, .subnav:hover .subnavbtn {
+.navbar a:hover, .navbar a.btn:enabled:hover, .subnav:hover .subnavbtn {
   background-color: #555;
 }
 
@@ -627,7 +635,7 @@ a {
   text-decoration: none;
 }
 
-.subnav-content a:hover {
+.subnav-content a:hover, .subnav-content a.btn:enabled:hover {
   background-color: #555;
   color: black;
 }
@@ -656,7 +664,7 @@ a {
 }
 
 /* Change background color of buttons on hover */
-.tab a:hover {
+.tab a:hover, .tab a.btn:enabled:hover {
   background-color: #ddd;
 }
 
@@ -696,7 +704,7 @@ a {
   background-color: #f2f2f2;
 }
 
-.hover tr:hover {
+.hover tr:hover, .hover tr.btn:enabled:hover {
   background-color: #f5f5f5;
 }
 

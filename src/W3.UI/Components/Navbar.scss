@@ -15,10 +15,12 @@
     font-size: 17px;
 }
 
-/* Add an active class to highlight the current page */
-.active {
-    background-color: #4CAF50;
-    color: white;
+.navbar {
+    /* Add an active class to highlight the current page */
+    .active {
+        background-color: #4CAF50;
+        color: white !important;
+    }
 }
 
 /* Hide the link that should open and close the navbar on small screens */
