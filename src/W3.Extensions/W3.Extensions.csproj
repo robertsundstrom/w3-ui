@@ -12,6 +12,18 @@
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\artifacts\</PackageOutputPath>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>build$([System.DateTime]::Now.ToString('yyyyMMdd-HHmm'))</VersionSuffix>
+    <Copyright>© Robert Sundström 2019</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Owners>Robert Sundström</Owners>
+    <PackageProjectUrl>https://github.com/robertsundstrom/w3-ui</PackageProjectUrl>
+    <Title>W3 Extensions</Title>
+  </PropertyGroup>
+
+
   <ItemGroup>
     <Content Include="tsconfig.json">
       <Pack>false</Pack>

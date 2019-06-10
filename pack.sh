@@ -16,4 +16,9 @@ __exec() {
 rm -r src/W3.UI/obj/
 
 __exec dotnet restore ./src/W3.UI/
+__exec dotnet build -c Release ./src/W3.UI/
 __exec dotnet pack -c Release ./src/W3.UI/
+
+__exec dotnet restore ./src/W3.Extensions/
+__exec dotnet build -c Release ./src/W3.Extensions/
+__exec dotnet pack -c Release ./src/W3.Extensions/

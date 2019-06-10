@@ -13,4 +13,9 @@ Remove-Item artifacts/ -Recurse -ErrorAction Ignore
 Remove-Item src/W3.UI/obj/ -Recurse -ErrorAction Ignore
 
 exec dotnet restore ./src/W3.UI/
+exec dotnet build -c Release ./src/W3.UI/
 exec dotnet pack -c Release ./src/W3.UI/
+
+exec dotnet restore ./src/W3.Extensions/
+exec dotnet build -c Release ./src/W3.Extensions/
+exec dotnet pack -c Release ./src/W3.Extensions/
