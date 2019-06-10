@@ -1,0 +1,23 @@
+﻿@page "/pagination"
+
+<h1>Pagination</h1>
+
+<p>Selected Page: @Results.CurrentPage</p>
+
+<Pagination Result=@Results PageChanged="@OnPageChanged"></Pagination>
+
+
+@functions {
+    PagedResult<object> Results { get; set; } = new PagedResult<object>
+    {
+        CurrentPage = 1,
+        PageSize = 5,
+        PageCount = 10,
+        Results = Enumerable.Range(0, 150).Select(x => (object)x).ToList()
+    };
+
+    private void OnPageChanged(int page)
+    {
+        Results.CurrentPage = page;
+    }
+}
