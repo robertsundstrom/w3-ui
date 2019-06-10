@@ -1,0 +1,14 @@
+﻿<div id="mySidenav" class="sidenav @(Animate ? "animate" : null)" style="@(IsOpen ? "width: 250px" : "width: 0")">
+    @ChildContent
+</div>
+
+@functions {
+    [Parameter]
+    private bool IsOpen { get; set; }
+
+    [Parameter]
+    private bool Animate { get; set; } 
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+}
