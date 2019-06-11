@@ -9,13 +9,13 @@ a.close {
 }
 
 .btn.black {
-  background-color: black;
+  background-color: #111;
   color: white;
 }
 
 /* Green */
 .btn.black:enabled:hover {
-  background-color: #000000e8;
+  background-color: #111;
   color: white;
 }
 
