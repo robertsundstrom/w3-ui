@@ -1,0 +1,21 @@
+﻿@page "/overlay"
+
+<h1>Overlay</h1>
+
+<button class="btn" onclick="@OnShowOverlayClick">Show overlay</button>
+
+<Overlay bind-IsOpen="@isOverlayOpen">
+    <h2>Hello</h2>
+    <p>Test</p>
+</Overlay>
+
+@functions {
+    bool isOverlayOpen = false;
+
+    async Task OnShowOverlayClick(UIMouseEventArgs ev)
+    {
+        isOverlayOpen = true;
+        await Task.Delay(5000);
+        isOverlayOpen = false;
+    }
+}

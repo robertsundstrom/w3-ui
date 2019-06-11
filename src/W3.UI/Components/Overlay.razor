@@ -1,0 +1,35 @@
+﻿@if (IsOpen)
+{
+    <div class="overlay" onclick="@OnClickOutside">
+        <div class="content">
+            @ChildContent
+        </div>
+    </div>
+}
+
+@functions {
+    [Parameter]
+    private bool CanClickAway { get; set; } = false;
+
+    [Parameter]
+    private bool IsOpen { get; set; }
+
+    [Parameter]
+    private EventCallback<bool> IsOpenChanged { get; set; }
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+    private void OnClickOutside(UIMouseEventArgs ev)
+    {
+        if (CanClickAway)
+        {
+            IsOpen = false;
+        }
+    }
+
+    private void OnCloseClick(UIMouseEventArgs ev)
+    {
+        IsOpen = false;
+    }
+}
