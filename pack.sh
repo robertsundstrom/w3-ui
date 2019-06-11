@@ -12,7 +12,7 @@ __exec() {
     $cmd $@
 }
 
-# rm -r artifacts/
+rm -r artifacts/
 rm -r src/W3.UI/obj/
 
 __exec dotnet restore ./src/W3.UI/
