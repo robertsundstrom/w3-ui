@@ -1,0 +1,33 @@
+﻿@using W3.UI.Components.UIInterfaces
+@implements IDisposable
+@implements ISlide
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+    @ChildContent
+</div>
+
+@functions {
+    [CascadingParameter]
+    private Slideshow ContainerSlideshow { get; set; }
+
+    [Parameter]
+    private string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; private set; }
+
+    protected override void OnInit()
+    {
+        ContainerSlideshow.AddSlide(this);
+    }
+
+    public void Dispose()
+    {
+        ContainerSlideshow.RemoveSlide(this);
+    }
+
+    private void Activate()
+    {
+        ContainerSlideshow.SetActiveSlide(this);
+    }
+}
