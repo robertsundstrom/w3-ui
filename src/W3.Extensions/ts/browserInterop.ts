@@ -1,6 +1,3 @@
-// This file is to show how a library package may provide JavaScript interop features
-// wrapped in a .NET API
-
 interface Window 
 {
   browserInterop: {
@@ -33,14 +30,3 @@ window.browserInterop = {
     }).click();
   }
 };
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("scrollTopButton").style.display = "block";
-  } else {
-      document.getElementById("scrollTopButton").style.display = "none";
-  }
-}
