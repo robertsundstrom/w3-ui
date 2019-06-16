@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 
 namespace W3.Extensions
 {
-    public class Browser
+    public class BrowserHelper
     {
         IJSRuntime jsRuntime;
         
-        public Browser(IJSRuntime jsRuntime) 
+        public BrowserHelper(IJSRuntime jsRuntime) 
         {
             this.jsRuntime = jsRuntime;
         }

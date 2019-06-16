@@ -4,9 +4,9 @@
 
 <p>Current count: @currentCount</p>
 
-<button class="hover" onclick="@IncrementCount">Click me</button>
+<button class="btn hover" onclick="@IncrementCount">Click me</button>
 
-@functions {
+@code {
     int currentCount = 0;
 
     void IncrementCount()
