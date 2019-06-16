@@ -2,10 +2,10 @@
 
 <h1>Modal</h1>
 
-<button class="btn" onclick="@OnShowModalClick">Show modal</button>
+<button class="btn" @onclick="@OnShowModalClick">Show modal</button>
 
 <Modal IsVisible="@isModalOpen">
-    <a class="close" onclick="@OnCloseClick">&times;</a>
+    <a class="close" @onclick="@OnCloseClick">&times;</a>
     <h2>Hello</h2>
     <p>Test</p>
 </Modal>

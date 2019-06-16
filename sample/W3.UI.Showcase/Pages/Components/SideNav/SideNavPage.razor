@@ -1,19 +1,19 @@
 @page "/sidenav"
 
 <SideNav IsOpen="@IsSideNavOpen" Animate="@Animate">
-    <a class="closebtn" onclick="@OnCloseClick">&times;</a>
+    <a class="closebtn" @onclick="@OnCloseClick">&times;</a>
     <NavLink href="/sidenav"><i class="fa fa-fw fa-home"></i> Home</NavLink>
     <NavLink href="/sidenav"><i class="fa fa-fw fa-envelope"></i> Contact</NavLink>
 </SideNav>
 
 <h1>SideNav</h1>
 
-<button class="btn black" onclick="@OnOpenClick">
+<button class="btn black" @onclick="@OnOpenClick">
     <i class="fa fa-bars"></i> Open menu
 </button>
 
 <label for="Animate">Animate</label>
-<input name="Animate" type="checkbox" bind="@Animate" />
+<input name="Animate" type="checkbox" @bind="Animate" />
 
 @code {
     [Parameter]

@@ -2,9 +2,9 @@
 
 <h1>Overlay</h1>
 
-<button class="btn" onclick="@OnShowOverlayClick">Show overlay</button>
+<button class="btn" @onclick="@OnShowOverlayClick">Show overlay</button>
 
-<Overlay bind-IsOpen="@isOverlayOpen">
+<Overlay @bind-IsOpen="isOverlayOpen">
     <h2>Hello</h2>
     <p>Test</p>
 </Overlay>
