@@ -1,3 +1,6 @@
+@using WebAssembly
+@implements IDisposable
+
 <div class="dropdown" onmouseover="@MouseOver">
     <button class="btn dropbtn" onclick="@ToggleDropMenu">
         @Text
@@ -13,6 +16,7 @@
 
 @code {
     bool isOpen = false;
+    JSObject window;
 
     [Parameter]
     private string Text { get; set; }
@@ -28,7 +32,29 @@
 
     protected override async Task OnInitAsync()
     {
+        window = (JSObject)WebAssembly.Runtime.GetGlobalObject("window");
+        window.Invoke("addEventListener", "click", (Action<JSObject>)OnWindowClick);
         await base.OnInitAsync();
+    }
+
+    private void OnWindowClick(JSObject ev) 
+    {
+        var document = (JSObject)WebAssembly.Runtime.GetGlobalObject("document");
+        var target = (JSObject)ev.GetObjectProperty("target");
+        if(isOpen) 
+        {
+            if(!(bool)target.Invoke("matches", ".dropbtn")) 
+            {
+                isOpen = false;
+                StateHasChanged();
+            }
+        }
+    }
+
+    public void Dispose() 
+    {
+        window.Invoke("removeEventListener", "click", (Action<JSObject>)OnWindowClick);
+        window.Dispose();
     }
 
     private void ToggleDropMenu(UIMouseEventArgs eventArgs)
