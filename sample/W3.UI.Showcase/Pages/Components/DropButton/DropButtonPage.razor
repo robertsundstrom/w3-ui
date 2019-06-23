@@ -3,10 +3,10 @@
 <h1>DropButton</h1>
 
 <label for="IsDropUp">Is Drop Up</label>
-<input name="IsDropUp" type="checkbox" bind="@isDropUp" />
+<input name="IsDropUp" type="checkbox" @bind="@isDropUp" />
 
 <label for="IsDropUp">Trigger on hover</label>
-<input name="IsDropUp" type="checkbox" bind="@triggerOnHover" />
+<input name="IsDropUp" type="checkbox" @bind="@triggerOnHover" />
 
 <DropButton Text="Test" Direction="@(isDropUp ? Direction.Up : Direction.Down)" Trigger="@(triggerOnHover ? DropTrigger.Hover : DropTrigger.Click)">
     <NavLink href="#">Link 1</NavLink>
