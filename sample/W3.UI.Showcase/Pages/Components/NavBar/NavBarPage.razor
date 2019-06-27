@@ -1,6 +1,19 @@
 @page "/navbar"
 
-<h1>Nav Bar</h1>
+<h1>NavBar</h1>
+
+<NavBar>
+    <a href="/navbar"><i class="fa fa-fw fa-home"></i> Home</a>
+    <DropButton Text="Company">
+        <a href="/navbar">Item 1</a>
+        <a href="/navbar">Item 2</a>
+        <a href="/navbar">Item 3</a>
+    </DropButton>
+    <a href="/navbar"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+</NavBar>
+
+
+<h2>SubNav</h2>
 
 <NavBar>
     <a href="/navbar"><i class="fa fa-fw fa-home"></i> Home</a>
@@ -14,10 +27,15 @@
             <a href="/navbar">Item 3</a>
         </ChildContent>
     </SubNav>
-    <DropButton Text="Company">
-        <a href="/navbar">Item 1</a>
-        <a href="/navbar">Item 2</a>
-        <a href="/navbar">Item 3</a>
-    </DropButton>
+    <SubNav>
+        <Content>
+            <button class="subnavbtn">Categories <i class="fa fa-caret-down"></i></button>
+        </Content>
+        <ChildContent>
+            <a href="/navbar">Item 1</a>
+            <a href="/navbar">Item 2</a>
+            <a href="/navbar">Item 3</a>
+        </ChildContent>
+    </SubNav>
     <a href="/navbar"><i class="fa fa-fw fa-envelope"></i> Contact</a>
 </NavBar>
