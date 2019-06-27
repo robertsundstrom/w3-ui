@@ -1,23 +1,76 @@
 ﻿@page "/pagination"
+@using System.Linq
 
 <h1>Pagination</h1>
 
-<p>Selected Page: @Results.CurrentPage</p>
+@if (results == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table striped hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in results.Results)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<Pagination Result=@Results PageChanged="@OnPageChanged"></Pagination>
+    <hr />
+
+    <Pagination Result=@results PageChanged="@OnPageChanged"></Pagination>
+}
 
 
 @code {
-    PagedResult<object> Results { get; set; } = new PagedResult<object>
-    {
-        CurrentPage = 1,
-        PageSize = 5,
-        PageCount = 10,
-        Results = Enumerable.Range(0, 150).Select(x => (object)x).ToList()
-    };
+    int pageSize = 10;
+    int currentPage = 1;
+    IEnumerable<Item> items;
+    PagedResult<Item> results;
 
     private void OnPageChanged(int page)
     {
-        Results.CurrentPage = page;
+        currentPage = page;
+        results = new PagedResult<Item>
+        {
+            CurrentPage = currentPage,
+            PageSize = pageSize,
+            PageCount = items.Count() / pageSize,
+            Results = items.Skip((currentPage -1) * pageSize).Take(pageSize).ToList()
+        };
+    }
+
+    protected override void OnInit()
+    {
+        items = Enumerable.Range(0, 30).Select(x => new Item() {
+            Id = x,
+            Name = $"Item {x}"
+        });
+
+        results = new PagedResult<Item>
+        {
+            CurrentPage = currentPage,
+            PageSize = pageSize,
+            PageCount = items.Count() / pageSize,
+            Results = items.Skip((currentPage -1) * pageSize).Take(pageSize).ToList()
+        };
+    }
+
+    class Item
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
     }
 }
