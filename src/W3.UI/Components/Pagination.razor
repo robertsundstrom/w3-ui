@@ -3,7 +3,7 @@
     <div class="pagination">
         @if(Result.CurrentPage != 1) 
         {
-            <a onclick="@(() => PagerButtonClicked(1))">&laquo;</a>
+            <a @onclick="@(() => PagerButtonClicked(1))">&laquo;</a>
         }
         @for (var i = StartIndex; i <= FinishIndex; i++)
         {
@@ -14,12 +14,12 @@
             }
             else
             {
-                <a onclick="@(() => PagerButtonClicked(currentIndex))" class="btn">@i</a>
+                <a @onclick="@(() => PagerButtonClicked(currentIndex))" class="btn">@i</a>
             }
         }
         @if(Result.CurrentPage != Result.PageCount) 
         {
-            <a onclick="@(() => PagerButtonClicked(Result.PageCount))">&raquo;</a>
+            <a @onclick="@(() => PagerButtonClicked(Result.PageCount))">&raquo;</a>
         }
     </div>
 }

@@ -2,13 +2,13 @@
 @implements IDisposable
 
 <div class="dropdown" onmouseover="@MouseOver">
-    <button class="btn dropbtn" onclick="@ToggleDropMenu">
+    <button class="btn dropbtn" @onclick="@ToggleDropMenu">
         @Text
         <i class="fa fa-caret-down"></i>
     </button>
     @if (isOpen)
     {
-    <div class="@(Direction == Direction.Down ? "dropdown-content" : "dropup-content")" id="myDropdown" onclick="@ItemClicked">
+    <div class="@(Direction == Direction.Down ? "dropdown-content" : "dropup-content")" id="myDropdown" @onclick="@ItemClicked">
         @ChildContent
     </div>
     }
