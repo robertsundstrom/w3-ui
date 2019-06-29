@@ -22,6 +22,13 @@
     <PackageProjectUrl>https://github.com/robertsundstrom/w3-ui</PackageProjectUrl>
     <Title>W3 UI</Title>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="tsconfig.json" />
+    <Content Include="tsconfig.json">
+      <Pack>false</Pack>
+    </Content>
+  </ItemGroup>
   
   <ItemGroup>
     <!-- .js/.css files will be referenced via <script>/<link> tags; other content files will just be included in the app's 'dist' directory without any tags referencing them -->
