@@ -1,0 +1,20 @@
+@namespace W3.UI.Components
+
+<div class="progressbar">
+  <div class="bar" style="width: @Value%">
+    @if(DisplayValue) 
+    {
+      <text>
+      @Value%
+      </text>
+    }
+  </div>
+</div>
+
+@code {
+    [Parameter]
+    private double Value { get; set; }
+
+    [Parameter]
+    private bool DisplayValue { get; set; }
+}
