@@ -1,7 +1,7 @@
 @using WebAssembly
 @implements IDisposable
 
-<div class="dropdown" onmouseover="@MouseOver">
+<div class="dropdown" @onmouseover="@MouseOver">
     <button class="btn dropbtn" @onclick="@ToggleDropMenu">
         @Text
         <i class="fa fa-caret-down"></i>
