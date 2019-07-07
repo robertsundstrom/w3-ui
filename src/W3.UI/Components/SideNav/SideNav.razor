@@ -1,4 +1,6 @@
-﻿<div id="mySidenav" class="sidenav @(Animate ? "animate" : null)" style="@(IsOpen ? "width: 250px" : "width: 0")">
+﻿@namespace W3.UI.Components
+
+<div id="mySidenav" class="sidenav @(Animate ? "animate" : null)" style="@(IsOpen ? "width: 250px" : "width: 0")">
     @ChildContent
 </div>
 
