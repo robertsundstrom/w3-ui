@@ -1,33 +1,34 @@
 ﻿@namespace W3.UI.Components
-
 @using W3.UI.Components.UIInterfaces
 @implements IDisposable
-@implements ISlide
+@implements ITab
 
-<!-- Full-width images with number and caption text -->
-<div class="slide fade">
+ <div class="column" @onclick="@Activate" >
     @ChildContent
 </div>
 
 @code {
     [CascadingParameter]
-    private Slideshow ContainerSlideshow { get; set; }
+    private TabGallery ContainerTabSet { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
 
     [Parameter]
     public RenderFragment ChildContent { get; private set; }
 
     protected override void OnInit()
     {
-        ContainerSlideshow.AddSlide(this);
+        ContainerTabSet.AddTab(this);
     }
 
     public void Dispose()
     {
-        ContainerSlideshow.RemoveSlide(this);
+        ContainerTabSet.RemoveTab(this);
     }
 
     private void Activate()
     {
-        ContainerSlideshow.SetActiveSlide(this);
+        ContainerTabSet.SetActivateTab(this);
     }
 }

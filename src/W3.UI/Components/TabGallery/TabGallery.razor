@@ -1,0 +1,54 @@
+﻿@namespace W3.UI.Components
+@using W3.UI.Components.UIInterfaces
+
+<!-- Display the tab headers -->
+<CascadingValue Value=this>
+    <div class="row">
+        @ChildContent
+    </div>
+</CascadingValue>
+
+<!-- Display body for only the active tab -->
+<div class="container">
+    @ActiveTab?.ChildContent
+
+    @if(ShowTitle) 
+    {
+        <div id="imgtext">@((ActiveTab as TabGalleryItem)?.Title)</div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    private bool ShowTitle { get; set; } = true;
+
+    public ITab ActiveTab { get; private set; }
+
+    public void AddTab(ITab tab)
+    {
+        if (ActiveTab == null)
+        {
+            SetActivateTab(tab);
+        }
+    }
+
+    public void RemoveTab(ITab tab)
+    {
+        if (ActiveTab == tab)
+        {
+            SetActivateTab(null);
+        }
+    }
+
+    public void SetActivateTab(ITab tab)
+    {
+        if (ActiveTab != tab)
+        {
+            ActiveTab = tab;
+            StateHasChanged();
+        }
+    }
+}
