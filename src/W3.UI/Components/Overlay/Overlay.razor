@@ -11,18 +11,18 @@
 
 @code {
     [Parameter]
-    private bool CanClickAway { get; set; } = false;
+    public bool CanClickAway { get; set; } = false;
 
     [Parameter]
-    private bool IsOpen { get; set; }
+    public bool IsOpen { get; set; }
 
     [Parameter]
-    private EventCallback<bool> IsOpenChanged { get; set; }
+    public EventCallback<bool> IsOpenChanged { get; set; }
 
     [Parameter]
-    private RenderFragment ChildContent { get; set; }
+    public RenderFragment ChildContent { get; set; }
 
-    private void OnClickOutside(UIMouseEventArgs ev)
+    private void OnClickOutside(MouseEventArgs ev)
     {
         if (CanClickAway)
         {
@@ -30,7 +30,7 @@
         }
     }
 
-    private void OnCloseClick(UIMouseEventArgs ev)
+    private void OnCloseClick(MouseEventArgs ev)
     {
         IsOpen = false;
     }

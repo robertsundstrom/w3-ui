@@ -21,6 +21,7 @@
     <Owners>Robert Sundström</Owners>
     <PackageProjectUrl>https://github.com/robertsundstrom/w3-ui</PackageProjectUrl>
     <Title>W3 Extensions</Title>
+    <NonExistentFile>WorkaroundForTypescriptBuildTask</NonExistentFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,10 +40,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Browser" Version="3.0.0-preview6.19307.2" />
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.4.5">
-      <PrivateAssets>all</PrivateAssets>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.0.0" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.6.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="WebAssembly.Bindings" Version="3.0.2" />
   </ItemGroup>

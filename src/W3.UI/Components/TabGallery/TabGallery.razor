@@ -20,10 +20,10 @@
 
 @code {
     [Parameter]
-    private RenderFragment ChildContent { get; set; }
+    public RenderFragment ChildContent { get; set; }
 
     [Parameter]
-    private bool ShowTitle { get; set; } = true;
+    public bool ShowTitle { get; set; } = true;
 
     public ITab ActiveTab { get; private set; }
 

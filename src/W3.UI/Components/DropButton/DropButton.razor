@@ -20,22 +20,22 @@
     JSObject window;
 
     [Parameter]
-    private string Text { get; set; }
+    public string Text { get; set; }
 
     [Parameter]
-    private Direction Direction { get; set; } = Direction.Down;
+    public Direction Direction { get; set; } = Direction.Down;
 
     [Parameter]
-    private DropTrigger Trigger { get; set; } = DropTrigger.Click;
+    public DropTrigger Trigger { get; set; } = DropTrigger.Click;
 
     [Parameter]
-    private RenderFragment ChildContent { get; set; }
+    public RenderFragment ChildContent { get; set; }
 
-    protected override async Task OnInitAsync()
+    protected override async Task OnInitializedAsync()
     {
         window = (JSObject)WebAssembly.Runtime.GetGlobalObject("window");
         window.Invoke("addEventListener", "click", (Action<JSObject>)OnWindowClick);
-        await base.OnInitAsync();
+        await base.OnInitializedAsync();
     }
 
     private void OnWindowClick(JSObject ev) 
@@ -58,7 +58,7 @@
         window.Dispose();
     }
 
-    private void ToggleDropMenu(UIMouseEventArgs eventArgs)
+    private void ToggleDropMenu(MouseEventArgs eventArgs)
     {
         if(Trigger == DropTrigger.Click) 
         {
@@ -66,12 +66,12 @@
         }
     }
 
-    private void ItemClicked(UIMouseEventArgs eventArgs)
+    private void ItemClicked(MouseEventArgs eventArgs)
     {
         isOpen = false;
     }
 
-    private void MouseOver(UIMouseEventArgs eventArgs)
+    private void MouseOver(MouseEventArgs eventArgs)
     {
         if(Trigger == DropTrigger.Hover) 
         {
@@ -79,7 +79,7 @@
         }
     }
 
-    private void MouseOut(UIMouseEventArgs eventArgs)
+    private void MouseOut(MouseEventArgs eventArgs)
     {
         if(Trigger == DropTrigger.Hover) 
         {

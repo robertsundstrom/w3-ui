@@ -17,17 +17,17 @@
 
 @code {
     [Parameter]
-    private bool IsSideNavOpen { get; set; }
+    public bool IsSideNavOpen { get; set; }
 
     [Parameter]
-    private bool Animate { get; set; }
+    public bool Animate { get; set; }
 
-    private void OnOpenClick(UIMouseEventArgs ev)
+    private void OnOpenClick(MouseEventArgs ev)
     {
         IsSideNavOpen = true;
     }
 
-    private void OnCloseClick(UIMouseEventArgs ev)
+    private void OnCloseClick(MouseEventArgs ev)
     {
         IsSideNavOpen = false;
     }

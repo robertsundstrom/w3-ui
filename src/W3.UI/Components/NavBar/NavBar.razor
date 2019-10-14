@@ -13,10 +13,10 @@
     string NavMenuCssClass => showNavMenu ? "responsive" : null;
 
     [Parameter]
-    private bool IsSticky { get; set; }
+    public bool IsSticky { get; set; }
 
     [Parameter]
-    private RenderFragment ChildContent { get; set; }
+    public RenderFragment ChildContent { get; set; }
 
     void ToggleNavMenu()
     {

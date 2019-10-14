@@ -51,7 +51,7 @@ else
         };
     }
 
-    protected override void OnInit()
+    protected override void OnInitialized()
     {
         items = Enumerable.Range(0, 30).Select(x => new Item() {
             Id = x,

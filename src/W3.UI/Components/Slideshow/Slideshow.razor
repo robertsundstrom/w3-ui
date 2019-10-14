@@ -37,10 +37,10 @@
     private Timer timer;
 
     [Parameter]
-    private RenderFragment ChildContent { get; set; }
+    public RenderFragment ChildContent { get; set; }
 
     [Parameter]
-    private bool IsAutomatic
+    public bool IsAutomatic
     {
         get
         {
@@ -77,7 +77,7 @@
     }
 
     [Parameter]
-    private TimeSpan ChangeTime { get; set; } = TimeSpan.FromSeconds(5);
+    public TimeSpan ChangeTime { get; set; } = TimeSpan.FromSeconds(5);
 
     private void PreviousSlide()
     {

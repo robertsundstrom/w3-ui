@@ -13,32 +13,32 @@ namespace W3.Extensions
             this.jsRuntime = jsRuntime;
         }
 
-        public Task<string> Prompt(string message)
+        public async Task<string> Prompt(string message)
         {
             // Implemented in exampleJsInterop.js
-            return jsRuntime.InvokeAsync<string>(
+            return await jsRuntime.InvokeAsync<string>(
                 "browserInterop.showPrompt",
                 message);
         }
 
-        public Task<string> GetDocumentTitle()
+        public async Task<string> GetDocumentTitle()
         {
-            return jsRuntime.InvokeAsync<string>("browserInterop.getDocumentTitle");
+            return await jsRuntime.InvokeAsync<string>("browserInterop.getDocumentTitle");
         }
 
-        public Task SetDocumentTitle(string value)
+        public async Task SetDocumentTitle(string value)
         {
-            return jsRuntime.InvokeAsync<object>("browserInterop.setDocumentTitle", value);
+            await jsRuntime.InvokeAsync<object>("browserInterop.setDocumentTitle", value);
         }
 
-        public Task ScrollToTop()
+        public async Task ScrollToTop()
         {
-            return jsRuntime.InvokeAsync<object>("browserInterop.scrollToTop");
+            await jsRuntime.InvokeAsync<object>("browserInterop.scrollToTop");
         }
 
-        public Task Navigate(Uri uri, bool newTab = false)
+        public async Task Navigate(Uri uri, bool newTab = false)
         {
-            return jsRuntime.InvokeAsync<object>("browserInterop.navigate", uri.ToString(), newTab);
+            await jsRuntime.InvokeAsync<object>("browserInterop.navigate", uri.ToString(), newTab);
         }
     }
 }
