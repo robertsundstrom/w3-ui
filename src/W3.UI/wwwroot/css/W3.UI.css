@@ -295,7 +295,7 @@ a {
   background: #da190b;
 }
 
-.btn.default, .btn, .btn:enabled:hover {
+.btn.default, .btn:enabled:hover {
   background-color: #e7e7e7;
   color: black;
 }
@@ -1022,5 +1022,3 @@ a {
 .active, .dot:hover, .dot.btn:enabled:hover {
   background-color: #717171;
 }
-
-/*# sourceMappingURL=W3.UI.css.map */

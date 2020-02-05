@@ -1,8 +1,12 @@
 {
     "compilerOptions": {
         "style": "expanded",
-        "sourceMap": true,
-        "outDir": "content/css"
+        "sourceMap": false,
+        "sourceMapUrls": "relative",
+        "embedSources": false,
+        "embedSourceMap": false,
+        "sourceDir": ".",
+        "outDir": "wwwroot/css"
     },
     "files": [
         "W3.UI.scss"

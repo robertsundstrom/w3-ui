@@ -7,8 +7,8 @@
       "preserveConstEnums": true,
       "removeComments": true,
       "sourceMap": true,
-      "sourceRoot": "../ts",
-      "outDir": "content/js"
+      "rootDir": "Content/ts",
+      "outDir": "wwwroot/js"
     }
   }
   

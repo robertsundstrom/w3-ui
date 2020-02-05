@@ -4,13 +4,11 @@ namespace BlazorApp
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var hostBuilder = WebAssemblyHostBuilder.CreateDefault();
+            hostBuilder.RootComponents.Add<App>("app");
+            await hostBuilder.Build().RunAsync();
         }
-
-        public static IWebAssemblyHostBuilder CreateHostBuilder(string[] args) =>
-            BlazorWebAssemblyHost.CreateDefaultBuilder()
-                .UseBlazorStartup<Startup>();
     }
 }

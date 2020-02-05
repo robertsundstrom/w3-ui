@@ -12,8 +12,8 @@ __exec() {
     $cmd $@
 }
 
-rm -r artifacts/
-rm -r src/W3.UI/obj/
+rm -r artifacts/ || true
+rm -r src/W3.UI/obj/ || true
 
 __exec dotnet restore ./src/W3.UI/
 __exec dotnet build -c Release ./src/W3.UI/
