@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W3.Extensions", "src\W3.Ext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssembly.Bindings", "src\WebAssembly.Bindings\WebAssembly.Bindings.csproj", "{0B0811FC-970F-4782-B495-51F3363F422F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevServer", "sample\DevServer\DevServer.csproj", "{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,18 @@ Global
 		{0B0811FC-970F-4782-B495-51F3363F422F}.Release|x64.Build.0 = Release|Any CPU
 		{0B0811FC-970F-4782-B495-51F3363F422F}.Release|x86.ActiveCfg = Release|Any CPU
 		{0B0811FC-970F-4782-B495-51F3363F422F}.Release|x86.Build.0 = Release|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Debug|x64.Build.0 = Debug|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Release|x64.ActiveCfg = Release|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Release|x64.Build.0 = Release|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DC19C6AA-045C-4E08-9A2D-8E9FFB890224} = {F4891337-146D-4B4C-B81E-EE871223A90A}
@@ -97,5 +111,11 @@ Global
 		{9FCCF9A2-EFFD-40D4-A326-E00FFC0BD902} = {4EAE5E08-9B9C-4771-9F6E-72CE0426CFFB}
 		{873BBA12-4705-49E1-9886-D70E5F4B61EB} = {F4891337-146D-4B4C-B81E-EE871223A90A}
 		{0B0811FC-970F-4782-B495-51F3363F422F} = {F4891337-146D-4B4C-B81E-EE871223A90A}
+		{ACB61E3A-A76B-49B3-94C7-48B8A4BF79B0} = {4EAE5E08-9B9C-4771-9F6E-72CE0426CFFB}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 	EndGlobalSection
 EndGlobal

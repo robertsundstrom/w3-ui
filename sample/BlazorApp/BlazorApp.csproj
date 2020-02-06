@@ -21,7 +21,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="SassTask" Version="0.2.0-build20200205-1355" PrivateAssets="All" />
+    <PackageReference Include="SassTask" Version="0.2.0-build20200205-1948" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

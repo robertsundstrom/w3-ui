@@ -3,7 +3,7 @@
         "style": "expanded",
         "sourceMap": true,
         "sourceMapUrls": "relative",
-        "embedSources": true,
+        "embedSources": false,
         "embedSourceMap": true,
         "sourceDir": ".",
         "outDir": "wwwroot/css"

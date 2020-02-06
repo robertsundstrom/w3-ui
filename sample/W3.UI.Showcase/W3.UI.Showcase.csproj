@@ -2,11 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <OutputType>Exe</OutputType>
-    <RestoreAdditionalProjectSources>
-      https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json;
-      https://dotnet.myget.org/F/blazor-dev/api/v3/index.json;
-    </RestoreAdditionalProjectSources>
     <LangVersion>7.3</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
   </PropertyGroup>
@@ -34,13 +29,5 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\W3.UI\W3.UI.csproj" />
     <!-- <ProjectReference Include="..\..\src\W3.Extensions\W3.Extensions.csproj" /> -->
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="wwwroot\js\test.js" />
-    <Content Remove="wwwroot\js\test.js.map" />
   </ItemGroup>
 </Project>
